@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phimaro</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+
+</head>
+
+<body class="bg-white text-gray-600 nunito-sans leading-normal text-base tracking-normal">
+
+    <!--NAVBAR-->
+    <nav id="header" class="w-full z-30 top-0 py-1 fixed bg-white">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3 bg-white">
+
+            <!-- Menú de hamburguesa -->
+            <label for="menu-toggle" class="cursor-pointer md:hidden block bg-white">
+                <i class="ph ph-list fill-current text-gray-900 text-xl" width="32" height="32" viewBox="0 0 20 20">
+                    <title>menu</title>
+                </i>
+            </label>
+            <input class="hidden" type="checkbox" id="menu-toggle" />
+
+            <!-- Items -->
+            <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-2" id="menu">
+                <nav>
+                    <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#comprar">Comprar</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#inspirate">Inspírate</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#acercade">Acerca de</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Logotipo -->
+            <div class="order-1 md:order-1">
+                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
+                    href="#">
+                    <img src="img/phimaro.png" alt="logotipo" class="fill-current text-gray-800 mr-2" width="120"
+                        height="120" viewBox="0 0 24 24">
+                </a>
+            </div>
+
+
+            <div class="order-2 md:order-3 flex items-center" id="nav-content">
+
+                <a class="inline-block no-underline hover:text-black" href="#">
+                    <i class="ph ph-user ill-current hover:text-black text-xl" width="32" height="32"
+                        viewBox="0 0 24 24">
+                        <circle fill="none" cx="12" cy="7" r="3" />
+                    </i>
+                </a>
+
+                <a class="pl-3 inline-block no-underline hover:text-black" href="#">
+                    <i class="ph ph-shopping-cart-simple fill-current hover:text-black text-xl" width="32" height="32"
+                        viewBox="0 0 24 24">
+                        <circle cx="10.5" cy="18.5" r="1.5" />
+                        <circle cx="17.5" cy="18.5" r="1.5" />
+                    </i>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero pt-20">
+        <div class="carousel relative container mx-auto" style="max-width:1600px;">
+            <div class="carousel-inner relative overflow-hidden w-full">
+                <!--Slide 1-->
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+                    checked="checked">
+                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                    <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                        style="background-image: url(img/banner1.avif);">
+
+                        <div class="container mx-auto">
+                            <div
+                                class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                                <p class="text-black text-4xl my-4">Tejidos de macramé</p>
+                                <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black"
+                                    href="#">Ver categoría</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <label for="carousel-3"
+                    class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-2"
+                    class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 2-->
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+                    <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
+                        style="background-image: url('img/banner2.webp');">
+
+                        <div class="container mx-auto">
+                            <div
+                                class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                                <p class="text-black text-4xl my-4">Cuadros texturizados</p>
+                                <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black"
+                                    href="#">Ver categoría</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <label for="carousel-1"
+                    class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-3"
+                    class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 3-->
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                    <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom"
+                        style="background-image: url('img/banner3.png');">
+
+                        <div class="container mx-auto">
+                            <div
+                                class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                                <p class="text-black text-4xl my-4">Bordados</p>
+                                <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black"
+                                    href="#">Ver categoría</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <label for="carousel-2"
+                    class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-1"
+                    class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!-- Se pueden agregar más-->
+                <ol class="carousel-indicators">
+                    <li class="inline-block mr-3">
+                        <label for="carousel-1"
+                            class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-2"
+                            class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-3"
+                            class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 1: COMPRAR -->
+    <section class="bg-white py-8" id="comprar">
+
+        <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+
+            <nav id="store" class="w-full z-60 top-0 px-6 py-1">
+                <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+
+                    <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
+                        href="#">
+                        Tienda
+                    </a>
+
+                    <div class="flex items-center" id="store-nav-content">
+                        <a class="pl-3 inline-block no-underline hover:text-black" href="#">
+                            <i class="ph ph-funnel-simple fill-current hover:text-black text-xl" width="24" height="24"
+                                viewBox="0 0 24 24"></i>
+                        </a>
+
+                        <a class="pl-3 inline-block no-underline hover:text-black" href="#">
+                            <i class="ph ph-magnifying-glass fill-current hover:text-black text-xl" width="24"
+                                height="24" viewBox="0 0 24 24"></i>
+                        </a>
+
+
+                    </div>
+                </div>
+
+                <a class="uppercase tracking-wide no-underline hover:no-underline font-medium text-gray-600 text-xl "
+                    href="#">
+                    TODOS LOS PRODUCTOS
+                </a>
+
+            </nav>
+
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product1.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$10.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product2.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product3.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Colgante de macramé</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product4.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Colgante con madera</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$30.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product5.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro texturizado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$10.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product6.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro texturizado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product7 .png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Colgante de macramé</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product8.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Colgante de macramé</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$30.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product9 .png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Colgante de macramé</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$10.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product10 .png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Colgante de macramé</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product11 .png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product12.jpg">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$30.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product13.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$10.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product14.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product15.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro texturizado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product16.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro texturizado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$30.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product17.jpg">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product18.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$30.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product19.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$100.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product20.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Colgante de macramé</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$30.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product21.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro texturizado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product22.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro texturizado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$30.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product23.jpg">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro bordado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$25.00</p>
+                </a>
+            </div>
+
+            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                <a href="#">
+                    <img class="hover:grow hover:shadow-lg" src="img/product24.png">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="">Cuadro texturizado</p>
+                        <i class="ph ph-heart-straight h-6 w-6 fill-current text-gray-500 hover:text-black text-xl"
+                            viewBox="0 0 24 24"></i>
+                    </div>
+                    <p class="pt-1 text-gray-900">$30.00</p>
+                </a>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section class="w-full bg-white py-8" id="inspirate">
+
+        <div class="container px-6 mx-auto">
+
+            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
+                href="#">
+                INSPÍRATE
+            </a>
+
+            <div class="flex flex-wrap justify-center">
+
+                <!-- Primera tarjeta -->
+                <div class="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 py-6 hover:grow">
+                    <div class="max-w-xl mx-auto overflow-hidden shadow-lg rounded-lg">
+                        <img class="w-full h-80 object-cover" src="img/homedecor.png" alt="Imagen de la Tarjeta">
+                        <div class="px-6 py-4">
+                            <h2 class="text-xl font-semibold text-gray-800">Decoración para el hogar</h2>
+                            <p class="mt-2 text-gray-600">Descubre nuestra exquisita colección de colgantes de macramé,
+                                cuadros texturizados y colgantes de madera. Transforma tu hogar en un espacio acogedor y
+                                lleno de estilo con nuestras piezas únicas y artesanales.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda tarjeta -->
+                <div class="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 py-6 hover:grow">
+                    <div class="max-w-xl mx-auto overflow-hidden shadow-lg rounded-lg ">
+                        <img class="w-full h-80 object-cover" src="img/officedecor.avif" alt="Imagen de la Tarjeta">
+                        <div class="px-6 py-4">
+                            <h2 class="text-xl font-semibold text-gray-800">Decoración para la oficina</h2>
+                            <p class="mt-2 text-gray-600">Optimiza tu espacio de trabajo con nuestra exclusiva variedad
+                                de colgantes de macramé, cuadros texturizados y colgantes de madera. Crea un entorno
+                                productivo y lleno de inspiración con nuestras piezas artísticas y funcionales.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="bg-white py-8" id="acercade">
+
+        <div class="container py-8 px-6 mx-auto">
+
+            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
+                href="#">
+                ACERCA DE
+            </a>
+
+            <p class="mt-8 mb-8">En <strong>phimaro</strong>, nos dedicamos a ofrecer productos únicos y de alta calidad
+                para transformar tu hogar y espacio de trabajo. Con una pasión por la creatividad y el diseño, nos
+                esforzamos por
+                proporcionar piezas que no solo embellecen tus espacios, sino que también añaden un toque de
+                originalidad y calidez.
+            </p>
+            <h2>Nuestra Historia</h2>
+            <p>Fundada en 2001, phimaro ha crecido desde sus humildes comienzos como un pequeño taller artesanal hasta
+                convertirse en un referente en el mundo de la decoración. Nos enorgullece ser artesanos y creadores,
+                inspirándonos en la naturaleza, la textura y la simplicidad.
+            </p> <br>
+            <h2>Filosofía de Diseño</h2>
+            <p>Creemos en la belleza de lo artesanal. Cada producto que creamos es una obra de arte única, elaborada con
+                atención al detalle y con materiales de la más alta calidad. Nos esforzamos por fusionar la
+                funcionalidad con la estética, creando piezas que no solo son hermosas, sino también prácticas.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="w-full bg-white py-8" id="contacto">
+
+        <div class="container px-6 mx-auto">
+
+            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8"
+                href="#">
+                CONTÁCTANOS
+            </a>
+
+            <!-- Formulario de contacto -->
+            <form action="" method="post" class="max-w-xl mx-auto bg-white p-8 shadow-md rounded-md">
+
+                <!-- Nombre -->
+                <div class="mb-4">
+                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="w-full p-2 border rounded-md"
+                        placeholder="Ingresa tu nombre" required>
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded-md"
+                        placeholder="Ingresa su correo electrónico" required>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="mb-4">
+                    <label for="mensaje" class="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" class="w-full p-2 border rounded-md"
+                        placeholder="Ingresa tu mensaje" required></textarea>
+                </div>
+
+                <!-- Botón de Envío -->
+                <div class="text-center">
+                    <button type="submit" class="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-black">Enviar
+                        Mensaje</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+        <div class="container flex px-3 py-8 ">
+            <div class="w-full mx-auto flex flex-wrap">
+                <div class="flex w-full lg:w-1/2 ">
+                    <div class="px-3 md:px-0">
+                        <h3 class="font-bold text-gray-900">Dirección</h3>
+                        <p class="py-4">
+                            Santa Tecla, La Libertad, El Salvador <br>
+                            +503 2519 7442
+                        </p>
+                    </div>
+                </div>
+                <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right mt-6 md:mt-0">
+                    <div class="px-3 md:px-0">
+                        <h3 class="text-left font-bold text-gray-900">Redes sociales</h3>
+
+                        <div class="w-full flex items-center py-4 mt-0">
+                            <a href="#" class="mx-2">
+                                <i class="ph ph-whatsapp-logo w-6 h-6 fill-current text-3xl" viewBox="0 0 24 24"></i>
+                            </a>
+                            <a href="#" class="mx-2">
+                                <i class="ph ph-facebook-logo w-6 h-6 fill-current text-3xl" viewBox="0 0 24 24"></i>
+                            </a>
+
+                            <a href="#" class="mx-2">
+                                <i class="ph ph-instagram-logo w-6 h-6 fill-current text-3xl" viewBox="0 0 24 24"></i>
+                            </a>
+
+                            <a href="#" class="mx-2">
+                                <i class="ph ph-linkedin-logo w-6 h-6 fill-current text-3xl" viewBox="0 0 24 24"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
